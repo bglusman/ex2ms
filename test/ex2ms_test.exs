@@ -234,5 +234,14 @@ defmodule Ex2msTest do
     assert ms == [{{:user, :_, :"$1"}, [{:==, :"$1", nil}], [:"$_"]}]
   end
 
+  test "in" do
+    ms =
+      fun do
+        n when n in [:a, :b, :c] -> n
+      end
+
+    assert ms == [{:"$1", [{:in, :"$1", [:a, :b, :c]}], [:"$1"]}]
+  end
+
   doctest Ex2ms
 end
