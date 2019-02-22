@@ -17,6 +17,7 @@ defmodule Ex2ms do
     :is_binary,
     :is_function,
     :is_record,
+    :in,
     :and,
     :or,
     :not,
